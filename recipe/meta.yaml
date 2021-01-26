@@ -1,5 +1,5 @@
 {% set name = "google-cloud-vision" %}
-{% set version = "0.42.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a162a546638cbc9db3db8a97a87a1e1930c3e316b01b2a1b78c8176630852ccd
+  sha256: 2bae8b4aca9aa38ad7459102cc5743c506adf9060ad2b3b15cff1e8021085017
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
-  skip: True  # [win and vc<14]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
+  skip: true  # [win and vc<14]
 
 requirements:
   host:
@@ -85,7 +85,7 @@ about:
   license: Apache 2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Python Client for Google Cloud Vision'
+  summary: Python Client for Google Cloud Vision
   description: |
     Python Client for Google Cloud Vision
     -------------------------
