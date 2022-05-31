@@ -1,91 +1,41 @@
 {% set name = "google-cloud-vision" %}
-{% set version = "0.42.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a162a546638cbc9db3db8a97a87a1e1930c3e316b01b2a1b78c8176630852ccd
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-vision-{{ version }}.tar.gz
+  sha256: 7bb1e327f0cdb3133a745afb10238f66c09387d34ddd7de27150c79de4bd5da0
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
-  skip: True  # [win and vc<14]
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
 
 requirements:
   host:
-    - python
-    - pip >=18.1
-    - google-api-core-grpc >=1.9.0
-    - enum34 >=1.1.6  # [py<=34]
+    - python >=3.4
+    - pip
   run:
-    - python
-    - google-api-core-grpc
-    - enum34  # [py<=34]
+    - python >=3.4
+    - google-api-core-grpc >=1.31.5,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
 
 test:
   imports:
-    - enum
-    - google.api
-    - google.api.annotations_pb2
-    - google.api.http_pb2
-    - google.api_core
-    - google.api_core.gapic_v1
-    - google.api_core.gapic_v1.config
-    - google.api_core.gapic_v1.method
-    - google.api_core.grpc_helpers
-    - google.api_core.operation
-    - google.api_core.operations_v1
-    - google.api_core.page_iterator
-    - google.api_core.path_template
-    - google.api_core.protobuf_helpers
-    - google.api_core.protobuf_helpers
-    - google.cloud
     - google.cloud.vision
-    - google.cloud.vision_helpers
-    - google.cloud.vision_helpers.decorators
-    - google.cloud.vision_v1
-    - google.cloud.vision_v1.gapic
-    - google.cloud.vision_v1.gapic.enums
-    - google.cloud.vision_v1.gapic.image_annotator_client
-    - google.cloud.vision_v1.gapic.image_annotator_client_config
-    - google.cloud.vision_v1.gapic.product_search_client
-    - google.cloud.vision_v1.gapic.product_search_client_config
-    - google.cloud.vision_v1.gapic.transports
-    - google.cloud.vision_v1.gapic.transports.image_annotator_grpc_transport
-    - google.cloud.vision_v1.gapic.transports.product_search_grpc_transport
-    - google.cloud.vision_v1.proto
-    - google.cloud.vision_v1.proto.geometry_pb2
-    - google.cloud.vision_v1.proto.geometry_pb2_grpc
-    - google.cloud.vision_v1.proto.image_annotator_pb2
-    - google.cloud.vision_v1.proto.image_annotator_pb2_grpc
-    - google.cloud.vision_v1.proto.product_search_pb2
-    - google.cloud.vision_v1.proto.product_search_pb2_grpc
-    - google.cloud.vision_v1.proto.product_search_service_pb2
-    - google.cloud.vision_v1.proto.product_search_service_pb2_grpc
-    - google.cloud.vision_v1.proto.text_annotation_pb2
-    - google.cloud.vision_v1.proto.text_annotation_pb2_grpc
-    - google.cloud.vision_v1.proto.web_detection_pb2
-    - google.cloud.vision_v1.proto.web_detection_pb2_grpc
-    - google.cloud.vision_v1.types
-    - google.longrunning
-    - google.longrunning.operations_grpc_pb2
-    - google.longrunning.operations_pb2
-    - google.oauth2
-    - google.protobuf
-    - google.protobuf.internal
-    - google.rpc
-    - google.type
-    - grpc
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/googleapis/google-cloud-python
-  license: Apache 2.0
+  home: https://github.com/googleapis/python-vision
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Python Client for Google Cloud Vision'
+  summary: Python Client for Google Cloud Vision
   description: |
     Python Client for Google Cloud Vision
     -------------------------
@@ -129,3 +79,4 @@ extra:
   recipe-maintainers:
     - BrentDorsey
     - parthea
+    - xylar
