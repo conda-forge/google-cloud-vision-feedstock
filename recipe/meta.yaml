@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-vision-{{ version }}.tar.gz
   sha256: e0d4d6c9fdeb9ddc35cc720d94132da0499d7d25c69d4fe3121c5a6fcd3b560e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -18,23 +18,18 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - google-api-core-grpc
-    - proto-plus
-    - packaging
   run:
     - python >=3.6
-    - pip >=18.1
-    - google-api-core-grpc >=1.26.0,<2.0.0dev
+    - google-api-core-grpc >=1.31.5,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
     - proto-plus >=1.15.0
-    - packaging >=14.3
 
 test:
   imports:
     - google.cloud.vision
-    - google.cloud.vision_helpers
-    - google.cloud.vision_helpers.decorators
-    - google.cloud.vision_v1
-    - grpc
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/googleapis/python-vision
