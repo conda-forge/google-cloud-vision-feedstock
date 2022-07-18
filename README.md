@@ -42,7 +42,7 @@ In order to use this library, you first need to go through the following steps:
 
 Supported Python Versions
 -----------
-Python >= 3.6
+Python >= 3.7
 
 
 Current build status
