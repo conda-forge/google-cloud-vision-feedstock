@@ -1,5 +1,5 @@
 {% set name = "google-cloud-vision" %}
-{% set version = "3.4.1" %}
+{% set version = "3.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-vision-{{ version }}.tar.gz
-  sha256: 56d048eecf09bd71b13246dc4597c6b28ac7d1105034675fdced93d259a2e9fd
+  sha256: b8b288da5634f78ac23173dd5d5ebd86ba2b37ce5c4cbadb564caa78188e0518
 
 build:
   noarch: python
