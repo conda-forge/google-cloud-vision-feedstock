@@ -70,8 +70,8 @@ about:
     -----------
     Python >= 3.7
 
-  doc_url: https://googleapis.dev/python/vision/latest/index.html
-  dev_url: https://github.com/googleapis/python-vision
+  doc_url: https://cloud.google.com/python/docs/reference/vision/latest/index.html
+  dev_url: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-vision
 
 extra:
   recipe-maintainers:
