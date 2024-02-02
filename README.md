@@ -9,9 +9,9 @@ Package license: Apache-2.0
 
 Summary: Google Cloud Vision API client library
 
-Development: https://github.com/googleapis/python-vision
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-vision
 
-Documentation: https://googleapis.dev/python/vision/latest/index.html
+Documentation: https://cloud.google.com/python/docs/reference/vision/latest/index.html
 
 Python Client for Google Cloud Vision
 -------------------------
