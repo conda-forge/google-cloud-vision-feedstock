@@ -3,7 +3,7 @@ About google-cloud-vision-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-vision-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/googleapis/python-vision
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-vision
 
 Package license: Apache-2.0
 
@@ -12,38 +12,6 @@ Summary: Google Cloud Vision API client library
 Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-vision
 
 Documentation: https://cloud.google.com/python/docs/reference/vision/latest/index.html
-
-Python Client for Google Cloud Vision
--------------------------
-
-The [Google Cloud Vision](https://cloud.google.com/vision/) API enables developers to
-understand the content of an image by encapsulating powerful machine
-learning models in an easy to use REST API. It quickly classifies images
-into thousands of categories (e.g., "sailboat", "lion", "Eiffel Tower"),
-detects individual objects and faces within images, and finds and reads
-printed words contained within images. You can build metadata on your
-image catalog, moderate offensive content, or enable new marketing
-scenarios through image sentiment analysis. Analyze images uploaded
-in the request or integrate with your image storage on Google Cloud
-Storage.
-
-- [Client Library Documentation](https://googleapis.dev/python/vision/latest/index.html)
-- [Product Documentation](https://cloud.google.com/vision/reference/rest/)
-
-Quick Start
------------
-
-In order to use this library, you first need to go through the following steps:
-
-1. [Select or create a Cloud Platform project.](https://console.cloud.google.com/project)
-2. [Enable billing for your project.](https://cloud.google.com/billing/docs/how-to/modify-project#enable_billing_for_a_project)
-3. [Enable the Google Cloud Language API.](https://cloud.google.com/natural-language)
-4. [Setup Authentication.](https://googleapis.github.io/google-cloud-python/latest/core/auth.html)
-
-Supported Python Versions
------------
-Python >= 3.7
-
 
 Current build status
 ====================
