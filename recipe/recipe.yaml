@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-vision
-  version: "3.12.0"
+  version: "3.12.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_cloud_vision-${{ version }}.tar.gz
-  sha256: 30009a22c979b3b0f52c1058a6b61bb19a3ea8f268611466fcbf309b74ff4734
+  sha256: f99b83af7588d30e708b87e09ff73e43e380497fe82c799b9f05e03f310027c8
 
 build:
   number: 0
